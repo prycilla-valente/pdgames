@@ -1,26 +1,38 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
 
-    font-family: 'Monteserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Open Sans, sans-serif';
+
+}
+.main-bg {
+    background-image: url('../img/endless-constellation.svg'); 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
 }
 
 header {
-    background-color: rgba(37, 37, 61, 0.555);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    color: white;
-    padding: 20px;
+    background-color: rgba(37, 37, 61, 0.85);
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .logo {
-    color: white;
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -31,25 +43,16 @@ header {
     color: white;
     text-decoration: none;
     transition: all 300ms ease-in-out;
-
 }
 
 .logo a:hover {
     color: darkorange;
-    
 }
 
 nav ul{
     list-style: none;
     display: flex; /*coloca a lista um do lado do outro*/
-    gap: 1.5rem;
-    justify-content: space-around; 
-    align-items: center;
-    height: 7vh;
-}
-nav ul li{
-    display:inline;
-    letter-spacing: 1.5px;
+    gap: 2rem;
 }
 
 nav ul li a {
@@ -58,22 +61,158 @@ nav ul li a {
     font-size: 1.5rem;
     font-weight: bold;
     transition: all 300ms ease-in-out;
+    
 }
 
 nav ul li a:hover {
     color: darkorange;
+    
+}
+.destaque {
+
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column; /*Coloca o título e a frase um embaixo do outro*/
+    justify-content: center;/*centraliza verticalmente*/
+    align-items: center;
+    text-align: center;
+   
+}
+
+.destaque h2 {
+    font-size: 4rem;
+    text-shadow: 0 0 10px #0066ff; /*cria um brilho*/
+}
+
+.destaque h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.destaque p {
+    max-width: 800px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.botao-principal {
+    font-size: 1.5rem;
+    display:inline-block;
+    margin-top: 2rem;
+    padding: 1rem e 2rem;
+    background-color: darkorange;
+    color:white;
+    text-decoration: none;
+    border:none;
+    border-radius: 45px; 
+    font-weight: bold;
+    transition: all 300ms ease-in-out;  
+}
+.botao-principal:hover{
+    transform: scale(1.5);
+    background-color: white;
+    color: darkorange;
+}
+.jogos {
+    padding: 5rem 5%;
+    text-align: center;
+    /*
+    flex-direction: column;
+  
+    align-items: center;*/
+
+    
+}
+.jogos h2 {
+    font-size: 2.5rem;
+}
+.jogos p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #cccccc;
+}
+.jogos ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+   /*margin-top: 3rem*/ 
+}
+
+.jogos ul li {
+    border-radius: 10px;
+    
+}
+
+.jogos ul li a {
+    text-decoration: none;
+    
+}
+
+.jogos ul li img {
+    display: block;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    padding-top: 2rem;
+    transition: transform 0.3s ease;
+}
+.jogos ul li img:hover {
+    transform: scale(1.5);
+}
+
+.cta {
+    text-align: center;
+    padding: 5rem 2 rem;
+    margin-top: 3rem;
+
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+}
+
+.cta p{
+    max-width: 700px;
+    margin: 1.5rem auto;
+    font-size: 1.3rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+ 
+  
+
+.botoes a {
+    padding: 1rem 1.5rem;
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+}
+.botoes a:hover {
+    background-color: white;
+    color: darkorange;
+    transform: scale(1.05);
+    
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color:#cccccc
+    
 }
 
-.main-bg {
-    background-image: url('../img/endless-constellation.svg'); 
-    background-position: center center;
-    background-size: cover;
-    max-width: 1200%;
-    margin: 0;
-}
 
+
+  
