@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
 }
 
 body {
@@ -12,22 +12,22 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Open Sans, sans-serif';
+font-family: 'Open Sans', sans-serif;
 
 }
 .main-bg {
-    background-image: url('../img/endless-constellation.svg'); 
+    background-image: url('../img/endless-constellation2.svg'); 
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: auto;
+    background-attachment: fixed; /*mantém a imagem fixa enquanto o usuário rola a página*/
     
 }
 
 header {
-    background-color: rgba(37, 37, 61, 0.85);
+    background-color: rgba(32, 32, 66, 0.712);
     padding: 1rem 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*coloca os elementos nas extremidades do header*/
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
@@ -58,9 +58,10 @@ nav ul{
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     transition: all 300ms ease-in-out;
+    letter-spacing: 2px;
     
 }
 
@@ -68,38 +69,46 @@ nav ul li a:hover {
     color: darkorange;
     
 }
-.destaque {
 
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column; /*Coloca o título e a frase um embaixo do outro*/
-    justify-content: center;/*centraliza verticalmente*/
-    align-items: center;
+section {
+    padding: 600px 20px;
+}
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+section p {
+  margin-bottom: 30px;
+}
+
+.destaque {
     text-align: center;
-   
+    padding: 80px 20px;
+        
 }
 
 .destaque h2 {
-    font-size: 4rem;
+    font-size: 50px;
+    margin-bottom: 20px; /*adiciona espaço entre o título e a frase*/
     text-shadow: 0 0 10px #0066ff; /*cria um brilho*/
 }
 
 .destaque h3 {
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 30px;
+    margin-bottom: 20px; /*adiciona espaço entre o subtítulo e o próximo elemento*/
 }
 .destaque p {
-    max-width: 800px;
+    max-width: 600px;
     font-size: 1.5rem;
-    line-height: 1.6;
-    margin-top: 1.5rem;
+    line-height: 1.6; /*adiciona espaçamento entre as linhas do texto*/
+    margin: 0 auto 25px; 
 }
 
 .botao-principal {
     font-size: 1.5rem;
     display:inline-block;
     margin-top: 2rem;
-    padding: 1rem e 2rem;
+    padding: 1rem 2rem;
     background-color: darkorange;
     color:white;
     text-decoration: none;
@@ -132,14 +141,14 @@ nav ul li a:hover {
     color: #cccccc;
 }
 .jogos ul{
-    list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 5rem;
-   /*margin-top: 3rem*/ 
-}
-
+    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+    list-style: none; 
+    padding: 0;
+}    
+       
 .jogos ul li {
     border-radius: 10px;
     
