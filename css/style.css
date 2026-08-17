@@ -4,23 +4,26 @@
     box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
 }
 
+html{
+   font-size: 16px;
+}
+
 body {
 
     font-family: 'Montserrat', sans-serif;
     color: white;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Open Sans', sans-serif;
 
 }
+
 .main-bg {
     background-image: url('../img/endless-constellation2.svg'); 
     background-position: center;
     background-size: auto;
     background-attachment: fixed; /*mantém a imagem fixa enquanto o usuário rola a página*/
-    
 }
 
 header {
@@ -29,6 +32,7 @@ header {
     display: flex;
     justify-content: space-between; /*coloca os elementos nas extremidades do header*/
     align-items: center;
+    gap: 2rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
@@ -36,7 +40,7 @@ header {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
-  
+ 
 }
 
 .logo a {
@@ -46,7 +50,8 @@ header {
 }
 
 .logo a:hover {
-    color: darkorange;
+    color: red;
+    
 }
 
 nav ul{
@@ -60,129 +65,31 @@ nav ul li a {
     color: white;
     font-size: 1.6rem;
     font-weight: bold;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
     letter-spacing: 2px;
-    
+   
 }
 
 nav ul li a:hover {
-    color: darkorange;
-    
-}
-
-section {
-    padding: 600px 20px;
-}
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-section p {
-  margin-bottom: 30px;
+    color: red;
+   
 }
 
 .destaque {
     text-align: center;
-    padding: 80px 20px;
-        
+    padding: 80px 20px;     
 }
 
-.destaque h2 {
-    font-size: 50px;
-    margin-bottom: 20px; /*adiciona espaço entre o título e a frase*/
-    text-shadow: 0 0 10px #0066ff; /*cria um brilho*/
-}
-
-.destaque h3 {
-    font-size: 30px;
-    margin-bottom: 20px; /*adiciona espaço entre o subtítulo e o próximo elemento*/
-}
-.destaque p {
-    max-width: 600px;
-    font-size: 1.5rem;
-    line-height: 1.6; /*adiciona espaçamento entre as linhas do texto*/
-    margin: 0 auto 25px; 
-}
-
-.botao-principal {
-    font-size: 1.5rem;
-    display:inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    background-color: darkorange;
-    color:white;
-    text-decoration: none;
-    border:none;
-    border-radius: 45px; 
-    font-weight: bold;
-    transition: all 300ms ease-in-out;  
-}
-.botao-principal:hover{
-    transform: scale(1.5);
-    background-color: white;
-    color: darkorange;
-}
-.jogos {
-    padding: 5rem 5%;
+.explore {
     text-align: center;
-    /*
-    flex-direction: column;
-  
-    align-items: center;*/
-
-    
-}
-.jogos h2 {
-    font-size: 2.5rem;
-}
-.jogos p{
     margin-top: 1rem;
-    font-size: 1.3rem;
-    color: #cccccc;
-}
-.jogos ul{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
-    list-style: none; 
-    padding: 0;
-}    
-       
-.jogos ul li {
-    border-radius: 10px;
-    
 }
 
-.jogos ul li a {
-    text-decoration: none;
-    
-}
-
-.jogos ul li img {
-    display: block;
-    width: 250px;
-    height: 200px;
-    border-radius: 10px;
-    padding-top: 2rem;
-    transition: transform 0.3s ease;
-}
-.jogos ul li img:hover {
-    transform: scale(1.5);
-}
-
-.cta {
-    text-align: center;
-    padding: 5rem 2 rem;
-    margin-top: 3rem;
-
-}
-
-.cta h2 {
+.explore h2 {
     font-size: 2.5rem;
 }
 
-.cta p{
+.explore p{
     max-width: 700px;
     margin: 1.5rem auto;
     font-size: 1.3rem;
@@ -194,34 +101,231 @@ section p {
     gap: 2rem;
     margin-top: 2rem;
 }
- 
-  
-
+   
 .botoes a {
     padding: 1rem 1.5rem;
-    background-color: darkorange;
+    background-color: rgb(20, 12, 124);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: all 300ms ease-in-out;
+    font-size: 20px;  
 }
 .botoes a:hover {
     background-color: white;
-    color: darkorange;
-    transform: scale(1.05);
-    
+    color:  rgb(20, 12, 124);
+    transform: scale(1.5);
+    font-size: 22px;
+        
 }
 
+.jogos {
+    padding: 5rem 5%;
+    text-align: center;
+
+}
+
+.jogos h2 {
+    font-size: 2.5rem;
+}
+
+.jogos p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #cccccc;
+}
+
+.jogos ul{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+    list-style: none; 
+    padding: 0;
+}    
+       
+.jogos ul li {
+    border-radius: 10px;
+   
+}
+
+.jogos ul li a {
+    text-decoration: none;
+}
+
+.jogos ul li img {
+    display: block;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    padding-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.jogos ul li img:hover {
+    transform: scale(1.5);
+}
+
+.sobre {
+    padding: 5rem 5%;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    }
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: normal;
+}
+
+.sobre h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.sobre p {
+    font-size: 1.7rem;
+    color: #cccccc;
+    text-align: justify;
+    margin-top: 3rem;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem;
+    flex-wrap: nowrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+    padding: 5rem 5%;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card-info {
+    background-color: rgba(32, 32, 66, 0.712);
+    border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
+    border-radius: 20px;
+    padding: 2rem;
+    width: 30%;
+    min-width: 350px;
+    cursor: pointer;
+    height: 400px;
+    transition: all 300ms ease-in-out;
+}
+
+.card-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-info p, 
+.card-info ul {
+    font-size: 1.5rem;
+    color: #cccccc;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 1rem;
+    padding-left: 0; 
+}
+
+.card-info li {
+    list-style-type: circle;
+    list-style-position: inside;
+ 
+}
+
+.produtos {
+    padding: 5rem 5%;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: center;
+    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+}
+
+.produtos h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.produtos p{
+    font-size: 1.7rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.card-jogo {
+  background-color: rgba(32, 32, 66, 0.712);
+  border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
+  width: 30%;
+  box-sizing: border-box;
+  height: 400px;
+  transition: 0.4s;
+  border-radius: 20px;
+  display:inline-block;
+  vertical-align:top;
+  margin:0 1%;
+  margin-top: 32px;
+}
+
+.card-jogo:hover {
+  transform: translateY(-10px);
+}
+
+.card-jogo a {
+    text-decoration: none;
+    color: white; 
+}
+
+.card-jogo img{
+    width: 50%;
+    height: 200px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+    list-style: none; 
+    padding: 0;  
+}
+
+.contato {
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contato h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contato p{
+    font-size: 1.7rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 3rem;
+}
 
 footer {
     padding: 1.5rem;
     text-align: center;
     margin-top: 20px;
-    color:#cccccc
-    
+    color:#cccccc;
+    background-color: rgba(32, 32, 66, 0.712);
 }
-
-
-
-  
+ 
