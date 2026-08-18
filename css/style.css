@@ -4,14 +4,10 @@
     box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
 }
 
-html{
-   font-size: 16px;
-}
-
 body {
-
     font-family: 'Montserrat', sans-serif;
     color: white;
+    background-color: rgba(32, 32, 66, 0.712); 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,7 +18,8 @@ font-family: 'Open Sans', sans-serif;
 .main-bg {
     background-image: url('../img/endless-constellation2.svg'); 
     background-position: center;
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat; /*garante que a imagem de fundo não se repita*/
     background-attachment: fixed; /*mantém a imagem fixa enquanto o usuário rola a página*/
 }
 
@@ -46,7 +43,7 @@ header {
 .logo a {
     color: white;
     text-decoration: none;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
 .logo a:hover {
@@ -115,9 +112,8 @@ nav ul li a:hover {
 .botoes a:hover {
     background-color: white;
     color:  rgb(20, 12, 124);
-    transform: scale(1.5);
-    font-size: 22px;
-        
+    transform: scale(1.1);
+   
 }
 
 .jogos {
@@ -164,7 +160,7 @@ nav ul li a:hover {
 }
 
 .jogos ul li img:hover {
-    transform: scale(1.5);
+    transform: scale(1.15);
 }
 
 .sobre {
@@ -197,7 +193,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center; 
     gap: 2rem;
-    flex-wrap: nowrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
     padding: 5rem 5%;
     letter-spacing: 1px;
     line-height: 1.6;
@@ -249,7 +244,6 @@ nav ul li a:hover {
     letter-spacing: 1px;
     line-height: 1.6;
     text-align: center;
-    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
 }
 
 .produtos h2 {
@@ -270,14 +264,15 @@ nav ul li a:hover {
   background-color: rgba(32, 32, 66, 0.712);
   border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
   width: 30%;
-  box-sizing: border-box;
   height: 400px;
-  transition: 0.4s;
   border-radius: 20px;
-  display:inline-block;
+  display: inline-block;
   vertical-align:top;
   margin:0 1%;
   margin-top: 32px;
+  transition: 0.4s;
+  box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
+   
 }
 
 .card-jogo:hover {
@@ -290,20 +285,16 @@ nav ul li a:hover {
 }
 
 .card-jogo img{
-    width: 50%;
+    width: 60%;
     height: 200px;
-    display: inline-flex;
-    justify-content: center;
-    gap: 5rem;
-    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
-    list-style: none; 
-    padding: 0;  
+     
 }
 
 .contato {
     letter-spacing: 1px;
     line-height: 1.6;
     text-align: center;
+    margin: 50px;
 }
 
 .contato h2 {
@@ -319,6 +310,84 @@ nav ul li a:hover {
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
+}
+
+.contato-form{
+    overflow: hidden; /*garante que o conteúdo do formulário não ultrapasse os limites do container*/
+    margin-top: 32px;
+    display: flex;
+    justify-content: center; /*centraliza o formulário horizontalmente*/
+    align-items: center; /*centraliza o formulário verticalmente*/
+    padding: 0 5%; /*adiciona um espaçamento interno de 5% nas laterais do formulário*/
+}
+
+.contato-form-card {
+    background-color: rgba(32, 32, 66, 0.712);
+    border: 3px solid #272344;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 900px;
+}
+
+.contato-form-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+.contato-form-card form {
+    display: flex;
+    flex-direction: column; /*organiza os elementos do formulário em uma coluna*/
+}
+
+.contato-form-card label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 300ms ease-in-out;
+}
+.contato-form-card input,
+.contato-form-card textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #272344 ao redor do campo*/
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    transition: all 300ms ease-in-out;
+}
+
+.contato-form-card textarea {
+    resize: vertical; /*permite que o usuário redimensione o campo de texto apenas na vertical*/
+    min-height: 150px; /*define uma altura mínima para o campo de texto*/
+}
+
+.contato-form-card input::placeholder,
+.contato-form-card textarea::placeholder {
+    color: #353434;
+    font-size: 1.2rem;
+}
+
+.contato-form-card button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(20, 12, 124);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.contato-form-card button:hover {
+    background-color: white;
+    color:  rgb(20, 12, 124);
+    transform: scale(1.05);
 }
 
 footer {
