@@ -234,14 +234,14 @@ nav ul li a:hover {
 }
 
 .sobre h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     text-align: left;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .sobre h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: justify;
 }
