@@ -106,7 +106,7 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
     font-size: 20px;  
 }
 .botoes a:hover {
@@ -208,7 +208,7 @@ nav ul li a:hover {
     min-width: 350px;
     cursor: pointer;
     height: 400px;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
 .card-info:hover {
@@ -271,8 +271,7 @@ nav ul li a:hover {
   margin:0 1%;
   margin-top: 32px;
   transition: 0.4s;
-  box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
-   
+     
 }
 
 .card-jogo:hover {
@@ -287,6 +286,9 @@ nav ul li a:hover {
 .card-jogo img{
     width: 60%;
     height: 200px;
+    display: block;
+    margin: 0 auto;
+
      
 }
 
@@ -358,7 +360,7 @@ nav ul li a:hover {
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
 .contato-form-card textarea {
@@ -397,4 +399,27 @@ footer {
     color:#cccccc;
     background-color: rgba(32, 32, 66, 0.712);
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+    .card-info {
+        width: 90%;
+        min-width: auto;
+    }
+    .card-jogo {
+        width: 90%;
+        max-width: auto;
+    }
+    .contato-form-card {
+        width: 100%;
+    }
+
+
+}
+
  
