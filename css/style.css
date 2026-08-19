@@ -1,43 +1,52 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*garante que o padding e a margin não afetem o tamanho do elemento*/
+    box-sizing: border-box;
+    /*garante que o padding e a margin não afetem o tamanho do elemento*/
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    background-color: rgba(32, 32, 66, 0.712); 
+    background-color: rgba(32, 32, 66, 0.712);
 }
 
-h1, h2, h3, h4, h5, h6 {
-font-family: 'Open Sans', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 .main-bg {
-    background-image: url('../img/endless-constellation2.svg'); 
+    background-image: url('../img/endless-constellation2.svg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; /*garante que a imagem de fundo não se repita*/
-    background-attachment: fixed; /*mantém a imagem fixa enquanto o usuário rola a página*/
+    background-repeat: no-repeat;
+    /*garante que a imagem de fundo não se repita*/
+    background-attachment: fixed;
+    /*mantém a imagem fixa enquanto o usuário rola a página*/
 }
 
 header {
     background-color: rgba(32, 32, 66, 0.712);
     padding: 1rem 5%;
     display: flex;
-    justify-content: space-between; /*coloca os elementos nas extremidades do header*/
+    justify-content: space-between;
+    /*coloca os elementos nas extremidades do header*/
     align-items: center;
     gap: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
- 
+
 }
 
 .logo a {
@@ -48,12 +57,13 @@ header {
 
 .logo a:hover {
     color: red;
-    
+
 }
 
-nav ul{
+nav ul {
     list-style: none;
-    display: flex; /*coloca a lista um do lado do outro*/
+    display: flex;
+    /*coloca a lista um do lado do outro*/
     gap: 2rem;
 }
 
@@ -64,17 +74,17 @@ nav ul li a {
     font-weight: bold;
     transition: color 300ms ease-in-out;
     letter-spacing: 2px;
-   
+
 }
 
 nav ul li a:hover {
     color: red;
-   
+
 }
 
 .destaque {
     text-align: center;
-    padding: 80px 20px;     
+    padding: 80px 20px;
 }
 
 .explore {
@@ -86,10 +96,15 @@ nav ul li a:hover {
     font-size: 2.5rem;
 }
 
-.explore p{
-    max-width: 700px;
-    margin: 1.5rem auto;
-    font-size: 1.3rem;
+.explore p {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: #cccccc;
+    line-height: 1.6;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
 }
 
 .botoes {
@@ -98,7 +113,7 @@ nav ul li a:hover {
     gap: 2rem;
     margin-top: 2rem;
 }
-   
+
 .botoes a {
     padding: 1rem 1.5rem;
     background-color: rgb(20, 12, 124);
@@ -107,13 +122,14 @@ nav ul li a:hover {
     border-radius: 8px;
     font-weight: bold;
     transition: color 300ms ease-in-out;
-    font-size: 20px;  
+    font-size: 20px;
 }
+
 .botoes a:hover {
     background-color: white;
-    color:  rgb(20, 12, 124);
+    color: rgb(20, 12, 124);
     transform: scale(1.1);
-   
+
 }
 
 .jogos {
@@ -126,24 +142,25 @@ nav ul li a:hover {
     font-size: 2.5rem;
 }
 
-.jogos p{
+.jogos p {
     margin-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: #cccccc;
 }
 
-.jogos ul{
+.jogos ul {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    flex-wrap: wrap; /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
-    list-style: none; 
+    flex-wrap: wrap;
+    /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
+    list-style: none;
     padding: 0;
-}    
-       
+}
+
 .jogos ul li {
     border-radius: 10px;
-   
+
 }
 
 .jogos ul li a {
@@ -163,11 +180,58 @@ nav ul li a:hover {
     transform: scale(1.15);
 }
 
+.depoimentos {
+    margin: 50px;
+    text-align: center;
+}
+
+.depoimentos p {
+    font-size: 1.8rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 3rem;
+
+}
+
+.depoimentos h2 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.card-depoimentos {
+    display: inline-block;
+    /*permite que os cards fiquem lado a lado*/
+    width: 30%;
+    margin: 1rem;
+    background-color: rgba(32, 32, 66, 0.712);
+    border: 3px solid #272344;
+    border-radius: 20px;
+    text-align: center;
+    padding: 24px;
+    transition: color 300ms ease-in-out;
+    box-sizing: border-box;
+    vertical-align: top;
+
+}
+
+.card-depoimentos:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-depoimentos blockquote {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
 .sobre {
     padding: 5rem 5%;
     letter-spacing: 1px;
     line-height: 1.6;
-    }
+}
 
 .sobre h2 {
     font-size: 2rem;
@@ -191,7 +255,7 @@ nav ul li a:hover {
 
 .informacoes {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 2rem;
     padding: 5rem 5%;
     letter-spacing: 1px;
@@ -201,7 +265,8 @@ nav ul li a:hover {
 
 .card-info {
     background-color: rgba(32, 32, 66, 0.712);
-    border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
+    border: 3px solid #272344;
+    /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
     border-radius: 20px;
     padding: 2rem;
     width: 30%;
@@ -209,11 +274,12 @@ nav ul li a:hover {
     cursor: pointer;
     height: 400px;
     transition: color 300ms ease-in-out;
+
 }
 
 .card-info:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-info h3 {
@@ -223,20 +289,20 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.card-info p, 
+.card-info p,
 .card-info ul {
     font-size: 1.5rem;
     color: #cccccc;
     line-height: 1.6;
     text-align: center;
     margin-top: 1rem;
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 .card-info li {
     list-style-type: circle;
     list-style-position: inside;
- 
+
 }
 
 .produtos {
@@ -253,7 +319,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.produtos p{
+.produtos p {
     font-size: 1.7rem;
     color: #cccccc;
     text-align: center;
@@ -261,35 +327,36 @@ nav ul li a:hover {
 }
 
 .card-jogo {
-  background-color: rgba(32, 32, 66, 0.712);
-  border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
-  width: 30%;
-  height: 400px;
-  border-radius: 20px;
-  display: inline-block;
-  vertical-align:top;
-  margin:0 1%;
-  margin-top: 32px;
-  transition: 0.4s;
-     
+    background-color: rgba(32, 32, 66, 0.712);
+    border: 3px solid #272344;
+    /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
+    width: 30%;
+    height: 400px;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1%;
+    margin-top: 32px;
+    transition: 0.4s;
+
 }
 
 .card-jogo:hover {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .card-jogo a {
     text-decoration: none;
-    color: white; 
+    color: white;
 }
 
-.card-jogo img{
+.card-jogo img {
     width: 60%;
     height: 200px;
     display: block;
     margin: 0 auto;
 
-     
+
 }
 
 .contato {
@@ -307,20 +374,24 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.contato p{
+.contato p {
     font-size: 1.7rem;
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
 }
 
-.contato-form{
-    overflow: hidden; /*garante que o conteúdo do formulário não ultrapasse os limites do container*/
+.contato-form {
+    overflow: hidden;
+    /*garante que o conteúdo do formulário não ultrapasse os limites do container*/
     margin-top: 32px;
     display: flex;
-    justify-content: center; /*centraliza o formulário horizontalmente*/
-    align-items: center; /*centraliza o formulário verticalmente*/
-    padding: 0 5%; /*adiciona um espaçamento interno de 5% nas laterais do formulário*/
+    justify-content: center;
+    /*centraliza o formulário horizontalmente*/
+    align-items: center;
+    /*centraliza o formulário verticalmente*/
+    padding: 0 5%;
+    /*adiciona um espaçamento interno de 5% nas laterais do formulário*/
 }
 
 .contato-form-card {
@@ -338,9 +409,11 @@ nav ul li a:hover {
     text-align: center;
     font-weight: bold;
 }
+
 .contato-form-card form {
     display: flex;
-    flex-direction: column; /*organiza os elementos do formulário em uma coluna*/
+    flex-direction: column;
+    /*organiza os elementos do formulário em uma coluna*/
 }
 
 .contato-form-card label {
@@ -349,12 +422,14 @@ nav ul li a:hover {
     font-size: 1.3rem;
     transition: all 300ms ease-in-out;
 }
+
 .contato-form-card input,
 .contato-form-card textarea {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1.5rem;
-    border: 3px solid #272344; /*adiciona uma borda de 3px de largura e cor #272344 ao redor do campo*/
+    border: 3px solid #272344;
+    /*adiciona uma borda de 3px de largura e cor #272344 ao redor do campo*/
     border-radius: 8px;
     background-color: white;
     color: black;
@@ -364,8 +439,10 @@ nav ul li a:hover {
 }
 
 .contato-form-card textarea {
-    resize: vertical; /*permite que o usuário redimensione o campo de texto apenas na vertical*/
-    min-height: 150px; /*define uma altura mínima para o campo de texto*/
+    resize: vertical;
+    /*permite que o usuário redimensione o campo de texto apenas na vertical*/
+    min-height: 150px;
+    /*define uma altura mínima para o campo de texto*/
 }
 
 .contato-form-card input::placeholder,
@@ -388,38 +465,41 @@ nav ul li a:hover {
 
 .contato-form-card button:hover {
     background-color: white;
-    color:  rgb(20, 12, 124);
+    color: rgb(20, 12, 124);
     transform: scale(1.05);
 }
 
 footer {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
     margin-top: 20px;
-    color:#cccccc;
+    color: #cccccc;
     background-color: rgba(32, 32, 66, 0.712);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
     .logo {
         font-size: 2.2rem;
     }
+
     nav ul li a {
         font-size: 1.1rem;
     }
+
     .card-info {
         width: 90%;
         min-width: auto;
     }
+
     .card-jogo {
         width: 90%;
         max-width: auto;
     }
+
     .contato-form-card {
         width: 100%;
     }
 
 
 }
-
- 
