@@ -9,8 +9,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: rgba(32, 32, 66, 0.712);
-    
+    min-height: 100vh;
 }
+
 
 h1,
 h2,
@@ -22,6 +23,9 @@ h6 {
 
 }
 
+main {
+    min-height: calc(100vh - 150px); /* ajusta a altura mínima do main considerando o header e o footer */  
+}
 .main-bg {
     background-image: url('../img/endless-constellation2.svg');
     background-position: center;
@@ -35,18 +39,16 @@ h6 {
 header {
     background-color: rgba(32, 32, 66, 0.712);
     padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    /*coloca os elementos nas extremidades do header*/
-    align-items: center;
-    gap: 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /*garante que o conteúdo do header não ultrapasse os limites do container*/
+
 }
 
 .logo {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
+    display:inline-block;
 
 }
 
@@ -61,13 +63,19 @@ header {
 
 }
 
+nav {
+    float: right;
+    margin-top: 1rem;
+}
 nav ul {
     list-style: none;
-    display: flex;
-    /*coloca a lista um do lado do outro*/
-    gap: 2rem;
+
 }
 
+nav ul li {
+    display: inline-block;
+    margin-left: 2rem;
+}
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -109,13 +117,17 @@ nav ul li a:hover {
 }
 
 .botoes {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    display: block;
+    width: 100%;
+    text-align: center;
     margin-top: 2rem;
+    margin-bottom: 5rem;
+    clear: both; /*garante que os botões não fiquem sobrepostos a outros elementos*/
 }
 
 .botoes a {
+    display: inline-block;
+    margin: 0 1rem;
     padding: 1rem 1.5rem;
     background-color: rgb(20, 12, 124);
     color: white;
@@ -141,6 +153,7 @@ nav ul li a:hover {
 
 .jogos h2 {
     font-size: 2.5rem;
+    
 }
 
 .jogos p {
@@ -150,17 +163,17 @@ nav ul li a:hover {
 }
 
 .jogos ul {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    flex-wrap: wrap;
-    /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .jogos ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1rem 2rem;
     border-radius: 10px;
+    
 
 }
 
@@ -211,7 +224,6 @@ nav ul li a:hover {
     text-align: center;
     padding: 24px;
     transition: color 300ms ease-in-out;
-    box-sizing: border-box;
     vertical-align: top;
 
 }
@@ -255,9 +267,6 @@ nav ul li a:hover {
 }
 
 .informacoes {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
     padding: 5rem 5%;
     letter-spacing: 1px;
     line-height: 1.6;
@@ -265,6 +274,9 @@ nav ul li a:hover {
 }
 
 .card-info {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1rem 0.8%;
     background-color: rgba(32, 32, 66, 0.712);
     border: 3px solid #272344;
     /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
@@ -338,7 +350,7 @@ nav ul li a:hover {
     vertical-align: top;
     margin: 0 1%;
     margin-top: 32px;
-    transition: 0.4s;
+    transition: transform 0.4s ease;
 
 }
 
@@ -364,6 +376,7 @@ nav ul li a:hover {
     letter-spacing: 1px;
     line-height: 1.6;
     text-align: center;
+  
     
 }
 
@@ -386,20 +399,16 @@ nav ul li a:hover {
     font-weight: bold;
 }
 .galeria-fotos {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    /*permite que os elementos se ajustem à largura da tela, quebrando a linha quando necessário*/
     padding: 0;
-    vertical-align: top;
-    margin: 0 1%;
+    text-align: center;
     margin-top: 32px;
     
 }
 
 .galeria-fotos img {
     display: inline-block;
+    vertical-align: top;
+    margin: 2rem 1rem 1rem;
     padding-top: 2rem;
     transition: transform 0.3s ease;
     background-color: rgba(32, 32, 66, 0.712);
@@ -412,11 +421,10 @@ nav ul li a:hover {
 }
 
 .botao-voltar{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
     width: 100%;
-    align-items: center;
 }
 .contato {
     letter-spacing: 1px;
@@ -444,16 +452,14 @@ nav ul li a:hover {
     overflow: hidden;
     /*garante que o conteúdo do formulário não ultrapasse os limites do container*/
     margin-top: 32px;
-    display: flex;
-    justify-content: center;
-    /*centraliza o formulário horizontalmente*/
-    align-items: center;
-    /*centraliza o formulário verticalmente*/
     padding: 0 5%;
     /*adiciona um espaçamento interno de 5% nas laterais do formulário*/
+    text-align: center;
 }
 
 .contato-form-card {
+    display: inline-block;
+    text-align: left;
     background-color: rgba(32, 32, 66, 0.712);
     border: 3px solid #272344;
     border-radius: 20px;
@@ -470,16 +476,15 @@ nav ul li a:hover {
 }
 
 .contato-form-card form {
-    display: flex;
-    flex-direction: column;
-    /*organiza os elementos do formulário em uma coluna*/
+    display: block;
 }
 
 .contato-form-card label {
+    display: block;
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 1.3rem;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
 .contato-form-card input,
