@@ -95,23 +95,22 @@ Durante o desenvolvimento do projeto foram praticados conceitos como:
 - Deploy.
 
 ## 📂 Estrutura do projeto
+## 📁 Estrutura do projeto
 
 ```text
 pdgames/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   └── script.js
-│   │
-│   └── images/
-│
-├── docs/
-│
-├── index.html
-├── sobre.html
-├── produtos.html
+├── css/
+│   └── style.css
+├── img/
 ├── contato.html
-└── README.md
+├── galeria-donkey-kong.html
+├── galeria-mario.html
+├── galeria-metroid.html
+├── galeria-street-fighter.html
+├── galeria-zelda.html
+├── index.html
+├── produtos.html
+├── README.md
+└── sobre.html
+```
+
