@@ -5,6 +5,9 @@
     /*garante que o padding e a margin não afetem o tamanho do elemento*/
 }
 
+html {
+    font-size: 16px;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;
