@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 62.5%;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -29,9 +29,10 @@ body {
     border: 3px solid #272344;
     border-radius: 50%;
     text-align: center;
+    line-height: 49px;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1000; /*garante que o botão fique acima de outros elementos*/
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -79,7 +80,7 @@ header {
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
     display: inline-block;
@@ -115,7 +116,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: bold;
     transition: color 300ms ease-in-out;
     letter-spacing: 2px;
@@ -129,7 +130,7 @@ nav ul li a:hover {
 
 .destaque {
     text-align: center;
-    padding: 80px 20px;
+    padding: 3rem 2%;
 }
 
 .explore {
@@ -138,12 +139,12 @@ nav ul li a:hover {
 }
 
 .explore h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .explore p {
     margin-top: 2rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
     line-height: 1.6;
     max-width: 90%;
@@ -156,23 +157,23 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
     clear: both;
     /*garante que os botões não fiquem sobrepostos a outros elementos*/
 }
 
 .botoes a {
     display: inline-block;
-    margin: 0 1rem;
-    padding: 1rem 1.5rem;
+    margin: 0 0.5rem;
+    padding: 0.8rem 1.2rem;
     background-color: rgb(20, 12, 124);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: color 300ms ease-in-out;
-    font-size: 20px;
+    font-size: 1.4rem;
 }
 
 .botoes a:hover {
@@ -189,13 +190,13 @@ nav ul li a:hover {
 }
 
 .jogos h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 
 }
 
 .jogos p {
     margin-top: 1rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
 }
 
@@ -220,8 +221,8 @@ nav ul li a:hover {
 
 .jogos ul li img {
     display: block;
-    width: 250px;
-    height: 200px;
+    width: 18rem;
+    height: 14rem;
     border-radius: 10px;
     padding-top: 2rem;
     transition: transform 0.3s ease;
@@ -237,7 +238,7 @@ nav ul li a:hover {
 }
 
 .depoimentos p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
@@ -246,7 +247,7 @@ nav ul li a:hover {
 
 .depoimentos h2 {
     margin-top: 2rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -284,7 +285,7 @@ nav ul li a:hover {
 }
 
 .sobre h2 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
     text-align: left;
     font-weight: bold;
@@ -297,7 +298,7 @@ nav ul li a:hover {
 }
 
 .sobre p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: justify;
     margin-top: 3rem;
@@ -320,9 +321,9 @@ nav ul li a:hover {
     border-radius: 20px;
     padding: 2rem;
     width: 30%;
-    min-width: 350px;
+    min-width:30rem;
     cursor: pointer;
-    height: 400px;
+    height: 20rem;
     transition: color 300ms ease-in-out;
 
 }
@@ -358,35 +359,36 @@ nav ul li a:hover {
 .produtos {
     padding: 5rem 5%;
     letter-spacing: 1px;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: center;
 }
 
 .produtos h2 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bold;
 }
 
 .produtos p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .card-jogo {
     background-color: rgba(32, 32, 66, 0.712);
     border: 3px solid #272344;
     /*adiciona uma borda de 3px de largura e cor #1B1830 ao redor do card*/
-    width: 30%;
-    height: 400px;
+    width: 21%;
+    height: 30rem;
     border-radius: 20px;
     display: inline-block;
     vertical-align: top;
     margin: 0 1%;
-    margin-top: 32px;
+    margin-top:3.2;
     transition: transform 0.4s ease;
 
 }
@@ -401,16 +403,21 @@ nav ul li a:hover {
 }
 
 .card-jogo img {
-    width: 60%;
-    height: 200px;
+    width: 55%;
+    height: 15rem;
     display: block;
     margin: 0 auto;
-
-
+    margin: 2rem auto 0 auto;
 }
 
+.card-jogo p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 1.5rem;
+}
 .galeria {
-    padding: 5rem 5%;
+    padding: 3rem 5%;
     letter-spacing: 1px;
     line-height: 1.6;
     text-align: center;
@@ -419,17 +426,17 @@ nav ul li a:hover {
 }
 
 .galeria h2 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bold;
 }
 
 .galeria p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .galeria h3 {
@@ -442,14 +449,16 @@ nav ul li a:hover {
 .galeria-fotos {
     padding: 0;
     text-align: center;
-    margin-top: 32px;
+    margin-top: 2rem;
 
 }
 
 .galeria-fotos img {
     display: inline-block;
     vertical-align: top;
-    margin: 2rem 1rem 1rem;
+    width: 25rem;
+    height: 18rem;
+    margin: 1rem 0.5rem;
     padding-top: 2rem;
     transition: transform 0.3s ease;
     background-color: rgba(32, 32, 66, 0.712);
@@ -468,6 +477,12 @@ nav ul li a:hover {
     width: 100%;
 }
 
+.botao-voltar a {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+}
+
 .contato {
     letter-spacing: 1px;
     line-height: 1.6;
@@ -477,14 +492,14 @@ nav ul li a:hover {
 
 .contato h2 {
     margin-top: 2rem;
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bold;
 }
 
 .contato p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
@@ -505,9 +520,9 @@ nav ul li a:hover {
     background-color: rgba(32, 32, 66, 0.712);
     border: 3px solid #272344;
     border-radius: 20px;
-    padding: 2rem;
-    width: 90%;
-    max-width: 900px;
+    padding: 1.5rem;
+    width:65%;
+    max-width: 600px;
 }
 
 .contato-form-card h3 {
