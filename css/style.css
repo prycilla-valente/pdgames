@@ -12,6 +12,34 @@ body {
     min-height: 100vh;
 }
 
+#tema {
+    display: none;
+}
+
+.botao-tema {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(206, 201, 230, 0.616);
+    border: 3px solid #272344;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#tema:checked+.botao-tema {
+    font-size: 0;
+}
+
+#tema:checked+.botao-tema::after {
+    content: '☀️';
+    font-size: 2rem;
+}
 
 h1,
 h2,
@@ -24,8 +52,10 @@ h6 {
 }
 
 main {
-    min-height: calc(100vh - 150px); /* ajusta a altura mínima do main considerando o header e o footer */  
+    min-height: calc(100vh - 150px);
+    /* ajusta a altura mínima do main considerando o header e o footer */
 }
+
 .main-bg {
     background-image: url('../img/endless-constellation2.svg');
     background-position: center;
@@ -40,7 +70,8 @@ header {
     background-color: rgba(32, 32, 66, 0.712);
     padding: 1rem 5%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /*garante que o conteúdo do header não ultrapasse os limites do container*/
+    overflow: hidden;
+    /*garante que o conteúdo do header não ultrapasse os limites do container*/
 
 }
 
@@ -48,7 +79,7 @@ header {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
-    display:inline-block;
+    display: inline-block;
 
 }
 
@@ -67,6 +98,7 @@ nav {
     float: right;
     margin-top: 1rem;
 }
+
 nav ul {
     list-style: none;
 
@@ -76,6 +108,7 @@ nav ul li {
     display: inline-block;
     margin-left: 2rem;
 }
+
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -122,7 +155,8 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 5rem;
-    clear: both; /*garante que os botões não fiquem sobrepostos a outros elementos*/
+    clear: both;
+    /*garante que os botões não fiquem sobrepostos a outros elementos*/
 }
 
 .botoes a {
@@ -153,7 +187,7 @@ nav ul li a:hover {
 
 .jogos h2 {
     font-size: 2.5rem;
-    
+
 }
 
 .jogos p {
@@ -173,7 +207,7 @@ nav ul li a:hover {
     vertical-align: top;
     margin: 1rem 2rem;
     border-radius: 10px;
-    
+
 
 }
 
@@ -371,13 +405,14 @@ nav ul li a:hover {
 
 
 }
+
 .galeria {
     padding: 5rem 5%;
     letter-spacing: 1px;
     line-height: 1.6;
     text-align: center;
-  
-    
+
+
 }
 
 .galeria h2 {
@@ -386,23 +421,26 @@ nav ul li a:hover {
     text-align: center;
     font-weight: bold;
 }
+
 .galeria p {
     font-size: 1.7rem;
     color: #cccccc;
     text-align: center;
     margin-top: 3rem;
 }
-.galeria h3{
+
+.galeria h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bold;
 }
+
 .galeria-fotos {
     padding: 0;
     text-align: center;
     margin-top: 32px;
-    
+
 }
 
 .galeria-fotos img {
@@ -420,12 +458,13 @@ nav ul li a:hover {
     transform: scale(1.15);
 }
 
-.botao-voltar{
+.botao-voltar {
     display: block;
     text-align: center;
     margin-top: 1rem;
     width: 100%;
 }
+
 .contato {
     letter-spacing: 1px;
     line-height: 1.6;
@@ -540,8 +579,101 @@ footer {
     color: #cccccc;
     background-color: rgba(32, 32, 66, 0.712);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    
+
 }
+
+/* TEMA CLARO*/
+
+body:has(#tema:checked) {
+    /*seleciona o body quando o checkbox com id "tema" estiver marcado*/
+    background-color: #f4f1ff;
+    color: #222;
+}
+
+/*Headeer*/
+body:has(#tema:checked) header {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+/*Logo*/
+body:has(#tema:checked) .logo a {
+    color: #20147c;
+}
+
+body:has(#tema:checked) .logo a:hover {
+    color: red;
+}
+
+/*Nav*/
+body:has(#tema:checked) nav ul li a {
+    color: #20147c;
+}
+
+body:has(#tema:checked) nav ul li a:hover {
+    color: red;
+}
+
+body:has(#tema:checked).main-bg {
+    background-image: url('../img/endless-constellation-claro.svg');
+}
+
+/*textos*/
+body:has(#tema:checked) .explore p,
+body:has(#tema:checked) .jogos p,
+body:has(#tema:checked) .depoimentos p,
+body:has(#tema:checked) .depoimentos blockquote,
+body:has(#tema:checked) .sobre p,
+body:has(#tema:checked) .informacoes p,
+body:has(#tema:checked) .card-info p,
+body:has(#tema:checked) .card-info ul,
+body:has(#tema:checked) .produtos p,
+body:has(#tema:checked) .card-jogo p,
+body:has(#tema:checked) .galeria p,
+body:has(#tema:checked) .contato p {
+    color: #333333;
+}
+
+/*cards*/
+body:has(#tema:checked) .card-depoimentos,
+body:has(#tema:checked) .card-info,
+body:has(#tema:checked) .card-jogo,
+body:has(#tema:checked) .galeria-fotos img,
+body:has(#tema:checked) .contato-form-card {
+    background-color: rgba(206, 201, 230, 0.616);
+    border-color: #b9b2d8;
+}
+
+/*links dos cards de jogos*/
+body:has(#tema:checked) .card-jogo a {
+    color: #222;
+}
+
+/* botões*/
+body:has(#tema:checked) .botoes a,
+body:has(#tema:checked) .contato-form-card button {
+    background-color: #20147c;
+    color: white;
+}
+
+/*botões hover*/
+body:has(#tema:checked) .botoes a:hover,
+body:has(#tema:checked) .contato-form-card button:hover {
+    background-color: rgba(206, 201, 230, 0.616);
+    color: #20147c;
+}
+
+body:has(#tema:checked) .botao-tema {
+    background-color: rgba(32, 32, 66, 0.712);
+    border-color: #b9b2d8;
+}
+
+/*rodapé*/
+body:has(#tema:checked) footer {
+    background-color: rgba(255, 255, 255, 0.90);
+    color: #333333;
+}
+
+
 
 @media (max-width: 768px) {
     .logo {
