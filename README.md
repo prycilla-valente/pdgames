@@ -94,7 +94,6 @@ Durante o desenvolvimento do projeto foram praticados conceitos como:
 - Git e GitHub;
 - Deploy.
 
-## 📂 Estrutura do projeto
 ## 📁 Estrutura do projeto
 
 ```text
